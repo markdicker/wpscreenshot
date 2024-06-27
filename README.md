@@ -3,7 +3,7 @@
 
 This generates a WP theme screenshot (the image displayed in Apperance.)
 
-    npm i wpscreenshot
+    npm i wpscreenshot --save-dev
 
 You have to pass a config object to the generate function.
 
@@ -28,7 +28,7 @@ The src image will be stretched to fit the width and height, so probably best to
 
 I use this with my themeVersion package to generate a screenshot file that has a visible version number.  You can install that with
 
-    npm i themeversion
+    npm i themeversion --save-dev
 
 You can then include that in the text field
 
@@ -37,5 +37,35 @@ You can then include that in the text field
     text: "Version: "+version,
     .
     .
+
+To use this in gulp
+
+    async function generateScreenshot() {
+        try {
+            const version = await tv.getVersion( 'style.css' );
+
+            const result = await wps.generate( config = {
+                width:800,
+                height:600,
+                filename: 'screenshot.png',
+                bgColor: "#ffffff",
+                font:'Arial',
+                fontPath: "./assets/fonts/arial.ttf",
+                fgColor: "#ff0000",
+                src: "screenshot-master.png",
+                text: "Version: "+version,
+                x:10,
+                y:70,
+                fontSize:'50px'
+            });
+
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    // Register the Gulp task
+    gulp.task( 'screenshot', generateScreenshot );
+
 
 ### I would consider this an early Beta version so use at your own risk.

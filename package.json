@@ -1,6 +1,6 @@
 {
   "name": "wpscreenshot",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generates a WP theme screenshot",
   "main": "index.js",
   "repository": {
