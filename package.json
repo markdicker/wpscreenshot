@@ -1,6 +1,6 @@
 {
   "name": "wpscreenshot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generates a WP theme screenshot",
   "main": "index.js",
   "repository": {
@@ -16,5 +16,8 @@
     "screenshot"
   ],
   "author": "Mark Dicker",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "pureimage": "^0.4.13"
+  }
 }
