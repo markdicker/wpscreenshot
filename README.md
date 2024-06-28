@@ -74,5 +74,5 @@ To use this in gulp
 
 This makes use of the npm package PureImage.  You can find out more about that package here
 
-(PureImage)[https://www.npmjs.com/package/pureimage]
+[https://www.npmjs.com/package/pureimage](https://www.npmjs.com/package/pureimage)
 
