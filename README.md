@@ -68,4 +68,11 @@ To use this in gulp
     gulp.task( 'screenshot', generateScreenshot );
 
 
-### I would consider this an early Beta version so use at your own risk.
+#### I would consider this an early Beta version so use at your own risk.
+
+### Thanks
+
+This makes use of the npm package PureImage.  You can find out more about that package here
+
+(PureImage)[https://www.npmjs.com/package/pureimage]
+
